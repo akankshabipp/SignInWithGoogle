@@ -86,6 +86,8 @@ class PhoneAuthViewController: UIViewController {
                     }
                     else {
                         print("Authentication success" + (authData?.user.phoneNumber! ?? "no number"))
+                        let vc = UserExistsViewController()
+                        self.navigationController?.pushViewController(vc, animated: true)
                     }
                 })
             }
